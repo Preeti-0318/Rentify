@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentify</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Form styling */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Property listing */
+        .property {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Property details */
+        .property-details {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rentify</h1>
+    </header>
+
+    <div class="container">
+        <!-- Login Form -->
+        <form id="login-form">
+            <h2>Login</h2>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+
+        <!-- Registration Form -->
+        <form id="registration-form" style="display: none;">
+            <h2>Register</h2>
+            <input type="text" name="first-name" placeholder="First Name" required>
+            <input type="text" name="last-name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Register">
+        </form>
+
+        <!-- Property Listings -->
+        <div class="property">
+            <h2>Property Title</h2>
+            <p>Location: City, Area</p>
+            <p>Bedrooms: 3</p>
+            <p>Bathrooms: 2</p>
+            <button onclick="showPropertyDetails()">View Details</button>
+        </div>
+
+        <!-- Property Details -->
+        <div class="property-details" style="display: none;">
+            <h2>Property Title</h2>
+            <p>Location: City, Area</p>
+            <p>Bedrooms: 3</p>
+            <p>Bathrooms: 2</p>
+            <p>Nearby: Hospital, College</p>
+            <p>Contact: Seller Name, Seller Email, Seller Phone</p>
+            <button onclick="hidePropertyDetails()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Rentify. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show property details
+        function showPropertyDetails() {
+            document.querySelector('.property-details').style.display = 'block';
+        }
+
+        // Function to hide property details
+        function hidePropertyDetails() {
+            document.querySelector('.property-details').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
